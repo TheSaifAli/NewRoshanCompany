@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+#navbar li{
+    @apply py-0 px-5 relative
+}
+
+#navbar li a{
+    @apply font-semibold text-[16px] text-[#1a1a1a]  transition-colors duration-200 ease-linear
+}
+ #navbar li a:hover,#navbar li a.active{
+   @apply text-[#AD9551] 
+}
+#navbar li a.active::after, #navbar li a:hover::after{
+   @apply content-[''] w-[30%] h-[2px] bg-[#AD9551] absolute -bottom-[4px] left-5
+}
+
+.featureBox{
+    @apply w-44 text-center py-6 px-5 rounded-md border shadow-md mx-0 my-4 hover:shadow-xl transition-[shadow]
+}
+
+.featureBox img{
+    @apply w-full mb-3 rounded-lg
+}
+
+.featureBox h6{
+    @apply p-1 inline-block font-normal rounded-md text-white
+}
+
+.featuredProduct{
+    @apply w-[23%] h-96 min-w-[250px] py-[.6rem] px-3 border border-[#AD9551] rounded-3xl shadow-xl my-4 mx-0 cursor-pointer flex flex-col justify-start items-start transition duration-200 ease-in-out hover:shadow-2xl hover:border-2 relative transition-all
+}
+.featuredProduct img{
+    @apply w-full rounded-2xl h-[60%] bg-cover
+}
+.featuredProduct div{
+    @apply text-start py-2.5
+}
+.featuredProduct a{
+    @apply w-10 h-10 rounded-3xl bg-[#dccda4] font-medium text-[#1a1a1a] flex justify-center items-center absolute bottom-5 right-5
+}
+.featuredProduct div span{
+    @apply text-[#dccda4] text-sm font-normal
+}
+.featuredProduct div h5{
+    @apply pt-1.5 text-[#1a1a1a] text-sm font-medium
+}
+.featuredProduct div h4{
+    @apply pt-1.5 text-sm font-bold text-[#4b3908]
+}
+.featuredProduct div div{
+    @apply text-[rgb(243,181,25)] text-[.82rem]
+}
